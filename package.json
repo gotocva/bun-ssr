@@ -1,0 +1,24 @@
+{
+  "name": "bun-ssr",
+  "module": "main.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run --watch main.ts",
+    "prod": "pm2 start production.config.js",
+    "build" : "bun build --compile --minify --sourcemap main.ts --outfile myapp"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/bearer": "^1.0.2",
+    "@elysiajs/cors": "^1.0.2",
+    "@elysiajs/static": "^1.0.2",
+    "@types/mongoose": "^5.11.97",
+    "elysia": "^1.0.11",
+    "mongoose": "^8.3.0"
+  }
+}
